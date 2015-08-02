@@ -52,13 +52,13 @@ require($directory."includes/vars.php");
             graph.addNode( "pine" , "Pine" );
 
             for(i=0;i<perLine.length-1;i++){
-                var line=perLine[i].split(" ");
+                var line=perLine[i].replace("   ","  ").split(" ");
                 ptime = line[3];
                 ptype = line[4];
                 pmac = line[7];
                 pssid = line[10];
 
-                console.log( i + " " + ptype + " " + pmac + " " + pssid);
+                console.log( "Log Zeile : " + i + " vom typ: " + ptype + " von MAC: " + pmac + " AN SSID: " + pssid);                
                 
                 if(ptype == "Probe"){
                   
